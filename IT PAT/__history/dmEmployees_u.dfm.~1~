@@ -1,0 +1,18 @@
+object dmEmployees: TdmEmployees
+  OldCreateOrder = False
+  Height = 150
+  Width = 215
+  object conEmployees: TADOConnection
+    Left = 24
+    Top = 24
+  end
+  object tblEmployees: TADOTable
+    Left = 88
+    Top = 80
+  end
+  object dscEmployees: TADODataSet
+    Parameters = <>
+    Left = 152
+    Top = 32
+  end
+end

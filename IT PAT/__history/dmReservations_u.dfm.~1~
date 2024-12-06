@@ -1,0 +1,17 @@
+object dmReservations: TdmReservations
+  OldCreateOrder = False
+  Height = 243
+  Width = 326
+  object ADOConnection1: TADOConnection
+    Left = 56
+    Top = 40
+  end
+  object ADOTable1: TADOTable
+    Left = 136
+    Top = 96
+  end
+  object DataSource1: TDataSource
+    Left = 224
+    Top = 40
+  end
+end

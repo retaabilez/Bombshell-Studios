@@ -1,0 +1,73 @@
+unit SignUp_u;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Home_u, dmReservations_u, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls, Vcl.StdCtrls;
+
+type
+  TfrmSignup = class(TForm)
+    Image1: TImage;
+    pnlSignUp: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label4: TLabel;
+    edtName: TEdit;
+    edtSurname: TEdit;
+    edtJob: TEdit;
+    Label3: TLabel;
+    edtPass: TEdit;
+    Button3: TButton;
+    Button1: TButton;
+    edtCell: TEdit;
+    Label5: TLabel;
+    procedure Button1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmSignup: TfrmSignup;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmSignup.Button1Click(Sender: TObject);
+begin
+ frmSignup.Hide;
+ frmHome.Show;
+end;
+
+procedure TfrmSignup.Button3Click(Sender: TObject);
+var sName, sSurname, sJob, sPassword : STring;
+    iCell : Integer;
+begin
+ // input
+
+ sName := edtName.Text;
+ sSurname := edtSurname.Text;
+ sJob := edtJob.Text;
+ sPassword := edtPass.Text;
+ iCell := StrToInt(edtCell.Text);
+
+ // processing
+
+ with dmReservations do
+ begin
+   tblReservation.Append;
+
+   tblFriends['Surname']
+ end;
+
+ // output
+
+
+end;
+
+end.

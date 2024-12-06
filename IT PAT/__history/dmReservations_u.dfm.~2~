@@ -1,0 +1,30 @@
+object dmReservations: TdmReservations
+  OldCreateOrder = False
+  Height = 243
+  Width = 326
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Retaabile ' +
+      'Zuzani\Documents\IT PAT\dbReservationSystem.mdb;Mode=ReadWrite;P' +
+      'ersist Security Info=False'
+    LoginPrompt = False
+    Mode = cmReadWrite
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 56
+    Top = 40
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'tblReservation'
+    Left = 136
+    Top = 96
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 224
+    Top = 40
+  end
+end

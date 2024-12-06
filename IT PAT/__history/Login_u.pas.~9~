@@ -1,0 +1,43 @@
+unit Login_u;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Home_u, Vcl.ExtCtrls,
+  Vcl.Imaging.pngimage, Vcl.StdCtrls, dmEmployees_u;
+
+type
+  TfrmLogin = class(TForm)
+    Image1: TImage;
+    Panel1: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label4: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit4: TEdit;
+    Button3: TButton;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLogin: TfrmLogin;
+  sName, sSurname, sPassword : String;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmLogin.Button1Click(Sender: TObject);
+begin
+ frmLogin.Hide;
+ frmHome.Show;
+end;
+
+end.

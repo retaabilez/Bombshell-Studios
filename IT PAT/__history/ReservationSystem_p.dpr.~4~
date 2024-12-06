@@ -1,0 +1,20 @@
+program ReservationSystem_p;
+
+uses
+  Vcl.Forms,
+  Home_u in 'Home_u.pas' {frmHome},
+  Overview_u in 'Overview_u.pas' {frmOverview},
+  LogSign_u in 'LogSign_u.pas' {frmLogSign},
+  Login_u in 'Login_u.pas' {frmLogin};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmHome, frmHome);
+  Application.CreateForm(TfrmOverview, frmOverview);
+  Application.CreateForm(TfrmLogSign, frmLogSign);
+  Application.CreateForm(TfrmLogin, frmLogin);
+  Application.Run;
+end.
